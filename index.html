@@ -1,10 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <link rel="stylesheet" href="CSS/main.css"/>
+
+
+
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<img src="images/pepe_chungi.jpg"/>
+
+<button onclick="button_pressed()">FIND ME</button>
+<br>
+<br>
+
+
+<div id="mapid"></div>
+<p id="teksti"></p>
+<aside>
+ Sää tiedot:<br>
+
+    </aside>
+
 </body>
+
+ <script src="js/script.js">
+ </script>
+
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+<script>
+
+
+  var mymap = L.map('mapid').setView([60.25, 24.9], 10);
+  L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', ).addTo(mymap);
+
+    /*
+   let popup = L.popup();
+   function onMapClick(e) {
+     popup
+     .setLatLng(e.latlng)
+     .setContent("You clicked the map at " + e.latlng.toString())
+     .openOn(mymap);
+   }
+*/
+   // mymap.on('click', onMapClick);
+
+
+    //SÄÄ TIEDOTUS CLICKAUS
+    mymap.on('click', weather);
+
+
+   var geojsonFeature = {
+     "type": "Feature",
+     "properties": {
+       "name": "Coors Field",
+       "amenity": "Baseball Stadium",
+       "popupContent": "This is where the Rockies play!"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [25, 60.25]
+
+     }
+   };
+   L.geoJSON(geojsonFeature).addTo(mymap);
+
+
+   var myLines = [{
+     "type": "LineString",
+     "coordinates": [[-100, 40], [-105, 45], [-115, 55]]
+   }, {
+     "type": "LineString",
+     "coordinates": [[-105, 40], [-110, 45], [-115, 55]]
+   }];
+
+   var myStyle = {
+     "color": "#ff7822",
+     "weight": 5,
+     "opacity": 0.65
+   };
+
+   L.geoJSON(myLines, {
+     style: myStyle
+   }).addTo(mymap);
+
+</script>
+
+
+
+
+</body>
+
 </html>
