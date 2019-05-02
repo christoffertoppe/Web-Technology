@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401a92c7-9626-45d4-b701-a9383beabb4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,23 +17,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSS/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+            <state relative-caret-position="422">
+              <caret line="106" column="48" lean-forward="true" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="691" column="41" lean-forward="true" selection-start-line="691" selection-start-column="41" selection-end-line="691" selection-end-column="41" />
+            <state relative-caret-position="3265">
+              <caret line="882" column="62" lean-forward="true" selection-start-line="882" selection-start-column="62" selection-end-line="882" selection-end-column="62" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#22921#82008#0" />
               </folding>
             </state>
           </provider>
@@ -157,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555071238136</updated>
       <workItem from="1555071239446" duration="2292000" />
-      <workItem from="1556802542689" duration="2150000" />
+      <workItem from="1556802542689" duration="2565000" />
     </task>
     <task id="LOCAL-00001" summary="joo?">
       <created>1555071930147</created>
@@ -170,7 +170,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4442000" />
+    <option name="totallyTimeSpent" value="4857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1431" height="811" extended-state="6" />
@@ -239,24 +239,23 @@
     <entry file="file://$PROJECT_DIR$/tiimi.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/pepe_chungi.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="691" column="41" lean-forward="true" selection-start-line="691" selection-start-column="41" selection-end-line="691" selection-end-column="41" />
+        <state relative-caret-position="3265">
+          <caret line="882" column="62" lean-forward="true" selection-start-line="882" selection-start-column="62" selection-end-line="882" selection-end-column="62" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#22921#82008#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="106" column="48" lean-forward="true" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="48" />
         </state>
       </provider>
     </entry>
