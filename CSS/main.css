@@ -1,3 +1,5 @@
+
+
 .centteri {text-align: center;
     display: flex;
     flex-direction: column;
@@ -5,11 +7,9 @@
 .centteri a:link {
     text-decoration: none;
 }
-
 .centteri a:visited {
     text-decoration: none;
 }
-
 .centteri a:hover {
     text-decoration: underline;
 }
@@ -22,8 +22,8 @@
     margin:0 auto;
 }
 body {
-    background-color: #05668D;
-    margin: 0;
+    background-color: white;
+    margin: 1% 3% 1% 2%;
     padding: 0;
 }
 h2 {color: blue}
@@ -59,7 +59,6 @@ ul{list-style-type:none;
     text-align: center;
 }
 .header a {
-
     color: black;
     text-align: center;
     padding: 12px;
@@ -101,7 +100,7 @@ ul{list-style-type:none;
     }
 }
 #mapid {
-    height: 400px;
+    height: 1000px;
     width: 100%;
     padding: 20px;
 }
