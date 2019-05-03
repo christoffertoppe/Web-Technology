@@ -2417,6 +2417,32 @@ function alue(alue) {
   /////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////
 
+  var areaD1 = [];
+  j = -1;
+  for (let i = 0; i < alue.features[3].geometry.coordinates[0][0].length; i++) {
+    j++;
+    areaD1[j] = alue.features[3].geometry.coordinates[0][0][i][1];
+    j++;
+    areaD1[j] = alue.features[3].geometry.coordinates[0][0][i][0];
+  }
+
+  console.log(areaD1.length);
+  console.log(alue.features[3].geometry.coordinates[0][0].length);
+
+  var areaD2 = [];
+  j = -1;
+  for (let i = 0; i < alue.features[3].geometry.coordinates[1][0].length; i++) {
+    j++;
+    areaD2[j] = alue.features[3].geometry.coordinates[1][0][i][1];
+    j++;
+    areaD2[j] = alue.features[3].geometry.coordinates[1][0][i][0];
+  }
+
+  console.log(areaD2.length);
+  console.log(alue.features[3].geometry.coordinates[1][0].length);
+
+
+
   var alueD = L.polygon([
 
     [
