@@ -1,3 +1,4 @@
+
 .centteri {text-align: center;
     display: flex;
     flex-direction: column;
@@ -88,20 +89,24 @@ ul{list-style-type:none;
         text-align: left;
 
     }
-    .header li{
-        float:none;
-    }
-.header{
-    width: 100%;
-    margin: 0;
 
-}
+    .header li {
+        float: none;
+    }
+
+    .header {
+        width: 100%;
+        margin: 0;
+
+    }
+
     .header-lista {
         float: left;
     }
 }
 body {
     width: 90%;
+>>>>>>>>> Temporary merge branch 2
 }
 #mapid {
     height: 400px;
