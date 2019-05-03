@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="CSS/main.css"/>
 
 
-
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="CSS/main.css" rel="stylesheet">
@@ -29,57 +28,34 @@
 
 
 
-<button onclick="button_pressed()">FIND ME</button>
+<button onclick="button_pressed()">FIND ME ON THE MAP</button>
 <br>
 <br>
-
 
 <div id="mapid"></div>
-<p id="teksti"></p>
+
+<p id="lippu"></p>
+
+
 <aside id="saa">
- Sää tiedot:<br>
+    Weather:<br>
+</aside>
 
-    </aside>
-
-
-
- <script src="js/script.js">
- </script>
+<script src="js/script.js">
+</script>
 
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
         integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-        crossorigin=""></script>
-<script>
-
-
-  var mymap = L.map('mapid').setView([60.25, 24.9], 10);
-  L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', ).addTo(mymap);
-
-
-
-   let popup = L.popup();
-   function onMapClick(e) {
-     weather(e);
-     popup
-     .setLatLng(e.latlng)
-     .setContent("Klickasit HSL-alueen ulkopuolelle")
-     .openOn(mymap);
-   }
-
-
- //   mymap.on('click', onMapClick);
-
-
-    //SÄÄ TIEDOTUS CLICKAUS
-   // mymap.on('click', weather());
-
-
+        crossorigin="">
 
 </script>
-
-
-
+<script>
+    /*
+    * luo olion mymap joka viittaa mapid elementtiin ja antaa kordinaatit 60.25, 24.9 sille (kordinaatit ovat helsingin alue) ja zoomaus taso 10.
+    */
+  var mymap = L.map('mapid').setView([60.25, 24.9], 10);
+  L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mymap);
+</script>
 
 </body>
-
 </html>
