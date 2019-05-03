@@ -8,25 +8,34 @@ if ("geolocation" in navigator) {
 
 var key = '1249e33a877128e5af660a8ff33f7f93';
 
+function button_pressed() {
+}
 function weather(e) {
+
   let latitude = e.latlng;
   lat = latitude.lat;
   lon = latitude.lng;
+
   fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' +
       lon + '&appid=' + key).
       then(function(vastaus) {
         return vastaus.json();
       }).
       then(function(json) {
-        naytaSisalto(json);
+        saaTieto(json);
       }).
       catch(function(error) {
         console.log(error);
       });
+
 }
 
-function naytaSisalto(sisalto) {
+function saaTieto(sisalto) {
   console.log(sisalto);
+  let saa = document.getElementById("saa");
+
+    saa.innerText = sisalto.name + " "
+        + sisalto.coord.lat + " " + sisalto.coord.lon;
 }
 /*
 function button_pressed() {
@@ -84,6 +93,150 @@ function alue(alue) {
   }
 
   console.log(areaA.length);
+
+
+
+
+/*
+  var alueA = [{
+      "type": "Feature",
+      "properties": {"party": "A"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [areaA  [0], areaA  [1]],
+            [areaA  [2], areaA  [3]],
+            [areaA  [4], areaA  [5]],
+            [areaA  [6], areaA  [7]],
+            [areaA  [8], areaA  [9]],
+            [areaA  [10], areaA  [11]],
+            [areaA  [12], areaA  [13]],
+            [areaA  [14], areaA  [15]],
+            [areaA  [16], areaA  [17]],
+            [areaA  [18], areaA  [19]],
+            [areaA  [20], areaA  [21]],
+            [areaA  [22], areaA  [23]],
+            [areaA  [24], areaA  [25]],
+            [areaA  [26], areaA  [27]],
+            [areaA  [28], areaA  [29]],
+            [areaA  [30], areaA  [31]],
+            [areaA  [32], areaA  [33]],
+            [areaA  [34], areaA  [35]],
+            [areaA  [36], areaA  [37]],
+            [areaA  [38], areaA  [39]],
+            [areaA  [40], areaA  [41]],
+            [areaA  [42], areaA  [43]],
+            [areaA  [44], areaA  [45]],
+            [areaA  [46], areaA  [47]],
+            [areaA  [48], areaA  [49]],
+            [areaA  [50], areaA  [51]],
+            [areaA  [52], areaA  [53]],
+            [areaA  [54], areaA  [55]],
+            [areaA  [56], areaA  [57]],
+            [areaA  [58], areaA  [59]],
+            [areaA  [60], areaA  [61]],
+            [areaA  [62], areaA  [63]],
+            [areaA  [64], areaA  [65]],
+            [areaA  [66], areaA  [67]],
+            [areaA  [68], areaA  [69]],
+            [areaA  [70], areaA  [71]],
+            [areaA  [72], areaA  [73]],
+            [areaA  [74], areaA  [75]],
+            [areaA  [76], areaA  [77]],
+            [areaA  [78], areaA  [79]],
+            [areaA  [80], areaA  [81]],
+            [areaA  [82], areaA  [83]],
+            [areaA  [84], areaA  [85]],
+            [areaA  [86], areaA  [87]],
+            [areaA  [88], areaA  [89]],
+            [areaA  [90], areaA  [91]],
+            [areaA  [92], areaA  [93]],
+            [areaA  [94], areaA  [95]],
+            [areaA  [96], areaA  [97]],
+            [areaA  [98], areaA  [99]],
+            [areaA  [100], areaA  [101]],
+            [areaA  [102], areaA  [103]],
+            [areaA  [104], areaA  [105]],
+            [areaA  [106], areaA  [107]],
+            [areaA  [108], areaA  [109]],
+            [areaA  [110], areaA  [111]],
+            [areaA  [112], areaA  [113]],
+            [areaA  [114], areaA  [115]],
+            [areaA  [116], areaA  [117]],
+            [areaA  [118], areaA  [119]],
+            [areaA  [120], areaA  [121]],
+            [areaA  [122], areaA  [123]],
+            [areaA  [124], areaA  [125]],
+            [areaA  [126], areaA  [127]],
+            [areaA  [128], areaA  [129]],
+            [areaA  [130], areaA  [131]],
+            [areaA  [132], areaA  [133]],
+            [areaA  [134], areaA  [135]],
+            [areaA  [136], areaA  [137]],
+            [areaA  [138], areaA  [139]],
+            [areaA  [140], areaA  [141]],
+            [areaA  [142], areaA  [143]],
+            [areaA  [144], areaA  [145]],
+            [areaA  [146], areaA  [147]],
+            [areaA  [148], areaA  [149]],
+            [areaA  [150], areaA  [151]],
+            [areaA  [152], areaA  [153]],
+            [areaA  [154], areaA  [155]],
+            [areaA  [156], areaA  [157]],
+            [areaA  [158], areaA  [159]],
+            [areaA  [160], areaA  [161]],
+            [areaA  [162], areaA  [163]],
+            [areaA  [164], areaA  [165]],
+            [areaA  [166], areaA  [167]],
+            [areaA  [168], areaA  [169]],
+            [areaA  [170], areaA  [171]],
+            [areaA  [172], areaA  [173]],
+            [areaA  [174], areaA  [175]],
+            [areaA  [176], areaA  [177]],
+            [areaA  [178], areaA  [179]],
+            [areaA  [180], areaA  [181]],
+            [areaA  [182], areaA  [183]],
+            [areaA  [184], areaA  [185]],
+            [areaA  [186], areaA  [187]],
+            [areaA  [188], areaA  [189]],
+            [areaA  [190], areaA  [191]],
+            [areaA  [192], areaA  [193]],
+            [areaA  [194], areaA  [195]],
+            [areaA  [196], areaA  [197]],
+            [areaA  [198], areaA  [199]],
+            [areaA  [200], areaA  [201]],
+            [areaA  [202], areaA  [203]],
+            [areaA  [204], areaA  [205]],
+            [areaA  [206], areaA  [207]],
+            [areaA  [208], areaA  [209]],
+            [areaA  [210], areaA  [211]],
+            [areaA  [212], areaA  [213]],
+            [areaA  [214], areaA  [215]],
+            [areaA  [216], areaA  [217]],
+            [areaA  [218], areaA  [219]],
+            [areaA  [220], areaA  [221]],
+            [areaA  [222], areaA  [223]],
+            [areaA  [224], areaA  [225]],
+            [areaA  [226], areaA  [227]],
+            [areaA  [228], areaA  [229]],
+            [areaA  [230], areaA  [231]],
+            [areaA  [232], areaA  [233]],
+            [areaA  [234], areaA  [235]],
+            [areaA  [236], areaA  [237]],
+            [areaA  [238], areaA  [239]]
+          ]]
+      }
+    }];
+
+  L.geoJSON(alueA, {
+    style: function(feature) {
+      switch (feature.properties.party) {
+        case "A": return {color: "#FFFF00"};
+      }
+    }
+  }).addTo(mymap);
+  */
 
   var alueA = L.polygon([
     [areaA  [0], areaA  [1]],
@@ -208,7 +361,19 @@ function alue(alue) {
     [areaA  [238], areaA  [239]],
   ]).addTo(mymap);
 
-  alueA.bindPopup('olet HSL-alueella A');
+  let popup = L.popup();
+  function Aalue(e) {
+    weather(e);
+    popup
+    .setLatLng(e.latlng)
+    .setContent("Klickattu alue on A-vyöhyke")
+    .openOn(mymap);
+  }
+
+  alueA.on('click', Aalue);
+
+ // alueA.bindPopup('olet HSL-alueella A');
+
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -220,6 +385,14 @@ function alue(alue) {
     j++;
     areaB[j] = alue.features[1].geometry.coordinates[0][i][0];
   }
+
+  function aa() {
+
+  console.log("jeee");
+  return "";
+
+  }
+
 
   console.log(areaB.length);
 
@@ -689,7 +862,16 @@ function alue(alue) {
     [areaB  [924], areaB  [925]],
   ]).addTo(mymap);
 
-  alueB.bindPopup('olet HSL-alueella B');
+  popup = L.popup();
+  function Balue(e) {
+    weather(e);
+    popup
+    .setLatLng(e.latlng)
+    .setContent("Klickattu alue on B-vyöhyke")
+    .openOn(mymap);
+  }
+
+  alueB.on('click', Balue);
 
   ///////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////////////
@@ -2380,6 +2562,17 @@ function alue(alue) {
     [areaC  [3342], areaC  [3343]],
   ]).addTo(mymap);
 
+  popup = L.popup();
+  function Calue(e) {
+    weather(e);
+    popup
+    .setLatLng(e.latlng)
+    .setContent("Klickattu alue on C-vyöhyke")
+    .openOn(mymap);
+  }
+
+  alueC.on('click', Calue);
+
   /////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////
 
@@ -2394,6 +2587,7 @@ function alue(alue) {
 
   console.log(areaD1.length);
   console.log(alue.features[3].geometry.coordinates[0][0].length);
+
   /*
   var alueD1 = L.polygon([
     [	areaD1	[	0	]	,	areaD1	[	1	]	]	,
@@ -3381,6 +3575,7 @@ function alue(alue) {
     [	areaD1	[	1964	]	,	areaD1	[	1965	]	]
   ]).addTo(mymap);
 */
+
   /////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////
 
@@ -3395,6 +3590,7 @@ function alue(alue) {
 
   console.log(areaD2.length);
   console.log(alue.features[3].geometry.coordinates[1][0].length);
+
   /*
   var alueD2 = L.polygon([
     [	areaD2	[	0	]	,	areaD2	[	1	]	]	,
@@ -6839,6 +7035,17 @@ function alue(alue) {
       [areaD2  [2446], areaD2  [2447]],
       [areaD2  [2448], areaD2  [2449]]],
   ]).addTo(mymap);
+
+  popup = L.popup();
+  function Dalue(e) {
+    weather(e);
+    popup
+    .setLatLng(e.latlng)
+    .setContent("Klickattu alue on D-vyöhyke")
+    .openOn(mymap);
+  }
+
+  alueD.on('click', Dalue);
 
 }
 
