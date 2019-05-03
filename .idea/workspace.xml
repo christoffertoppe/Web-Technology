@@ -13,16 +13,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSS/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="106" column="48" lean-forward="true" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="48" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -153,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555071238136</updated>
       <workItem from="1555071239446" duration="2292000" />
-      <workItem from="1556802542689" duration="3113000" />
+      <workItem from="1556802542689" duration="3506000" />
     </task>
     <task id="LOCAL-00001" summary="joo?">
       <created>1555071930147</created>
@@ -166,10 +166,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5405000" />
+    <option name="totallyTimeSpent" value="5798000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1431" height="811" extended-state="7" />
+    <frame x="-7" y="-7" width="1431" height="811" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.097631015" />
@@ -231,16 +231,6 @@
     <entry file="file://$PROJECT_DIR$/images/pepe_chungi.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="873" column="23" lean-forward="true" selection-start-line="873" selection-start-column="23" selection-end-line="873" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-490">
@@ -250,8 +240,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CSS/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="106" column="48" lean-forward="true" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="48" />
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="873" column="23" lean-forward="true" selection-start-line="873" selection-start-column="23" selection-end-line="873" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
