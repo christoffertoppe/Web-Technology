@@ -33,32 +33,31 @@ function saaTieto(sisalto) {
   console.log(sisalto);
   let saa = document.getElementById('saa');
 
-  saa.innerText = 'Weather:\n Station: ' + sisalto.name + ' ['
+  saa.innerText = 'Weather\n Station: ' + sisalto.name + ' ['
       + sisalto.coord.lat + ', ' + sisalto.coord.lon + ']\n' +
-      sisalto.weather[0].main + '\n' +
+      'Weather condition: ' + sisalto.weather[0].main + '\n' +
       'Temperature: ' + (sisalto.main.temp - 273.15).toFixed() + ' celsius.';
 }
 
-
 function vyohykeA_hinnasto() {
-  lippu = document.getElementById("lippu");
-  lippu.innerText = "Last selected zone\nZone A ticket prices:\nAB 2,80€\nABC 4,60€\nABCD 6,40€";
+  lippu = document.getElementById('lippu');
+  lippu.innerText = 'Last selected zone\nZone A ticket prices:\nAB 2,80€\nABC 4,60€\nABCD 6,40€';
 }
+
 function vyohykeB_hinnasto() {
-  lippu = document.getElementById("lippu");
-  lippu.innerText = "Last selected zone\nZone B ticket prices:\nAB ja BC 2,80€\nABC 4,60€\nBCD 5,40€\nABCD 6,40€";
+  lippu = document.getElementById('lippu');
+  lippu.innerText = 'Last selected zone\nZone B ticket prices:\nAB ja BC 2,80€\nABC 4,60€\nBCD 5,40€\nABCD 6,40€';
 }
+
 function vyohykeC_hinnasto() {
- lippu = document.getElementById("lippu");
- lippu.innerText = "Last selected zone\nZone C ticket prices:\nBC 2,80€\nABC 4,60€\nCD 4,20€\nABCD 6,40€";
+  lippu = document.getElementById('lippu');
+  lippu.innerText = 'Last selected zone\nZone C ticket prices:\nBC 2,80€\nABC 4,60€\nCD 4,20€\nABCD 6,40€';
 }
+
 function vyohykeD_hinnasto() {
-  lippu = document.getElementById("lippu");
-  lippu.innerText = "Last selected zone\nZone D ticket prices:\nD 2,80€\nCD 4,20€\nBCD 5,40€\nABCD 6,40€";
+  lippu = document.getElementById('lippu');
+  lippu.innerText = 'Last selected zone\nZone D ticket prices:\nD 2,80€\nCD 4,20€\nBCD 5,40€\nABCD 6,40€';
 }
-
-
-
 
 /* HSL-alueen GEOJSON taulukko*/
 fetch(
@@ -73,11 +72,8 @@ fetch(
       console.log(error);
     });
 
-
-
 function alue(alue) {
   console.log(alue);
-
 
   var areaA = [];
   let j = -1;
@@ -89,7 +85,6 @@ function alue(alue) {
   }
 
   console.log(areaA.length);
-
 
   var alueA = L.polygon([
     [areaA  [0], areaA  [1]],
@@ -225,7 +220,6 @@ function alue(alue) {
   }
 
   alueA.on('click', Aalue);
-
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
@@ -2422,8 +2416,6 @@ function alue(alue) {
 
   /////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////
-
-
 
   var alueD = L.polygon([
 
@@ -4654,11 +4646,9 @@ function alue(alue) {
 
   //SÄÄ TIEDOTUS JOS KLIKKAA HSL ALUEEN ULKOPUOLELLE
 
-
   mymap.on('click', onMapClick);
 
 }
-
 
 function onMapClick(e) {
   weather(e);
