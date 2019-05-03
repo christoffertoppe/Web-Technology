@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .centteri {text-align: center;
     display: flex;
     flex-direction: column;
@@ -89,21 +89,23 @@ ul{list-style-type:none;
         text-align: left;
 
     }
-    .header li{
-        float:none;
-    }
-.header{
-    width: 100%;
-    margin: 0;
 
-}
+    .header li {
+        float: none;
+    }
+
+    .header {
+        width: 100%;
+        margin: 0;
+
+    }
+
     .header-lista {
         float: left;
     }
-=======
+}
 body {
     width: 90%;
->>>>>>> 7e96b29cebb450e7826078adf8fa85e51a4045a1
 }
 #mapid {
     height: 400px;
