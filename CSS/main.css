@@ -1,12 +1,11 @@
 
-.centteri {text-align: center;
+.centteri {
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
-.centteri a:link {
-    text-decoration: none;
-}
 
+.centteri a:link,
 .centteri a:visited {
     text-decoration: none;
 }
@@ -18,71 +17,131 @@
 .centteri a:active {
     text-decoration: underline;
 }
+
 .centteri video {
-    display:block;
-    margin:0 auto;
+    display: block;
+    margin: 0 auto;
 }
-body {
-    background-color: #05668D;
+
+ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
-h2 {color: blue}
-h3{
-    color: blue;
-}
-ul{list-style-type:none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;}
+
 .header li {
     float: left;
     text-align: center;
     width: 33.3%;
-}.header li a:hover {
-     background-color: #F0F3BD;
- }
+}
+
+.header li:first-child a:hover {
+    background: url(../images/brick.jpeg) no-repeat fixed center;
+    background-size: cover;
+    color: #fff;
+}
+
+.header li:nth-child(2) a:hover {
+    background: url(../images/flowerz.jpg) no-repeat fixed center;
+    background-size: cover;
+    color: #fff;
+}
+
+.header li:last-child a:hover {
+    background-color: #b3a9fd;
+    color: #fff;
+}
+
 .header li a {
     display: block;
-    color: black;
+    color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    padding: 5%;
+    padding: 5px;
     text-decoration: none;
 }
 
 .header {
-    overflow: hidden;
-    background-color:#00A896;
-    padding: 30px 10px;
-    margin:30px 30px 30px 30px;
-
-    width: 95%;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    padding: 10px;
+    width: 100%;
     text-align: center;
 }
-.header a {
 
-    color: black;
+.header a {
+    color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    padding: 12px;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 .header h1.logo {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
+    padding: 5px 0 0 0;
+    margin: 10px;
 }
-
-
-
-
 
 .header-lista {
-   text-align: center;
+    text-align: center;
 }
+
+button {
+    z-index: 3;
+    position: fixed;
+    top: 118px;
+    left: 75px;
+    font-size: 20px;
+    background: white;
+}
+
+#active {
+    color: #e227ff;
+}
+
+#mapid {
+    position: relative;
+    z-index: 1;
+    height: 700px;
+    width: 98%;
+    margin: 70px 1% 30px 1%;
+}
+
+#teksti {
+    z-index: 4;
+    color: black;
+    background-color: rgba(134, 253, 245, 0.5);
+    position: absolute;
+    top: 80%;
+    margin: 0;
+    left: 2%;
+    padding: 10px;
+}
+
+#saa::first-line, #teksti::first-line {
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+}
+
+#tiimi, .centteri {
+    margin: 180px 5%;
+}
+
+#väli {
+    height: 200px;
+}
+
 @media screen and (max-width: 700px) {
+    .header {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
     .header a {
         float: none;
         display: block;
@@ -90,26 +149,30 @@ ul{list-style-type:none;
 
     }
 
-    .header li {
-        float: none;
-    }
-
-    .header {
+    .header-lista li {
         width: 100%;
-        margin: 0;
-
+        float: none;
+        text-align: center;
     }
 
     .header-lista {
+        width: 100%;
         float: left;
     }
+
+    #mapid {
+        margin: 130px auto auto 0;
+        height: 600px;
+        width: 100%;
+    }
+
+    button {
+        margin: 60px 0 0 0;
+    }
+    #teksti{
+        top: 70%;
+    }
 }
-body {
-    width: 90%;
->>>>>>>>> Temporary merge branch 2
-}
-#mapid {
-    height: 400px;
-    width: 100%;
-    padding: 20px;
+html, a{
+    color: #ffffff;
 }

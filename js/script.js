@@ -32,6 +32,8 @@ function weather(e) {
 function saaTieto(sisalto) {
   console.log(sisalto);
   let saa = document.getElementById('saa');
+  let teksti = document.getElementById('teksti').style = 'display: block';
+
 
   saa.innerText = 'Weather\n Station: ' + sisalto.name + ' ['
       + sisalto.coord.lat + ', ' + sisalto.coord.lon + ']\n' +
