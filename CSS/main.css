@@ -111,7 +111,7 @@ button {
 #mapid {
     position: relative;
     z-index: 1;
-    height: 700px;
+    height: 630px;
     width: 98%;
     margin: 70px 1% 30px 1%;
 }
@@ -121,7 +121,7 @@ button {
     color: black;
     background-color: rgba(134, 253, 245, 0.5);
     position: absolute;
-    top: 80%;
+    top: 65%;
     margin: 0;
     left: 2%;
     padding: 10px;
@@ -133,26 +133,29 @@ button {
     margin: 3px;
 }
 
-#tiimi, .centteri {
+#tiimi{ margin: 130px 5% 20px 5%}
+.centteri {
     margin: 180px 5%;
 }
 
 .flexaus {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    flex-flow: row wrap;
+
 
 }
 
 .flexaus li {
     list-style-type: none;
-    width: 25%;
-    justify-content: space-evenly;
+    width: 300px;
+    margin: 22px;
     text-align: center;
     line-height: 45px;
-    padding: 0 20px;
+    padding: 0;
     font-size: 20px;
     word-wrap: break-word;
+
 }
 
 #väli {
@@ -200,17 +203,14 @@ button {
 
     .flexaus {
         display: flex;
-        justify-content: space-evenly;
         flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
+        justify-content: space-evenly;
     }
 
     .flexaus li {
-        padding-left: 60px;
-        padding-right: 60px;
         list-style-type: none;
         width: 300px;
+        margin: 15px;
         text-align: center;
         line-height: 45px;
         font-size: 20px;
