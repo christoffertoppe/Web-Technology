@@ -48,6 +48,12 @@ ul {
     color: #fff;
 }
 
+.header li:nth-child(3) a:hover {
+    background: url(../images/forest.jpg) no-repeat fixed center;
+    background-size: cover;
+    color: #fff;
+}
+
 .header li:last-child a:hover {
     background-color: #b3a9fd;
     color: #fff;
@@ -99,7 +105,7 @@ button {
 }
 
 #active {
-    color: #e227ff;
+    color: #77F7FF;
 }
 
 #mapid {
