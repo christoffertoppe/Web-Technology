@@ -111,7 +111,7 @@ button {
 #mapid {
     position: relative;
     z-index: 1;
-    height: 700px;
+    height: 630px;
     width: 98%;
     margin: 70px 1% 30px 1%;
 }
@@ -121,7 +121,7 @@ button {
     color: black;
     background-color: rgba(134, 253, 245, 0.5);
     position: absolute;
-    top: 80%;
+    top: 65%;
     margin: 0;
     left: 2%;
     padding: 10px;
@@ -133,7 +133,8 @@ button {
     margin: 3px;
 }
 
-#tiimi, .centteri {
+#tiimi{ margin: 130px 5% 20px 5%}
+.centteri {
     margin: 180px 5%;
 }
 
