@@ -142,18 +142,21 @@ button {
     display: flex;
 
     flex-flow: row wrap;
+    justify-content: space-evenly;
+
 
 }
 
 .flexaus li {
     list-style-type: none;
-    width: 25%;
+    width: 300px;
     margin: 22px;
     text-align: center;
     line-height: 45px;
-    padding: 0 40px;
+    padding: 0;
     font-size: 20px;
     word-wrap: break-word;
+
 }
 
 #väli {
