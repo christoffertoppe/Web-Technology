@@ -139,7 +139,7 @@ button {
 
 .flexaus {
     display: flex;
-
+    justify-content: space-evenly;
     flex-flow: row wrap;
 
 }
@@ -147,10 +147,10 @@ button {
 .flexaus li {
     list-style-type: none;
     width: 25%;
-    margin: 22px;
+    justify-content: space-evenly;
     text-align: center;
     line-height: 45px;
-    padding: 0 40px;
+    padding: 0 20px;
     font-size: 20px;
     word-wrap: break-word;
 }
@@ -200,13 +200,17 @@ button {
 
     .flexaus {
         display: flex;
-        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
     }
 
     .flexaus li {
+        padding-left: 60px;
+        padding-right: 60px;
         list-style-type: none;
         width: 300px;
-        margin: 15px;
         text-align: center;
         line-height: 45px;
         font-size: 20px;
