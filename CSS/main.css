@@ -80,7 +80,7 @@ ul {
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 20px;
 }
 
@@ -209,7 +209,7 @@ button {
         margin: 15px;
         text-align: center;
         line-height: 45px;
-        font-size: 25px;
+        font-size: 20px;
 
         word-wrap: break-word;
     }
