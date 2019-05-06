@@ -1,5 +1,7 @@
 var key = '1249e33a877128e5af660a8ff33f7f93';
 
+document.getElementById('find_button').addEventListener('click', button_pressed);
+
 function button_pressed() {
   navigator.geolocation.getCurrentPosition(function(position) {
     console.log(position.coords.latitude, position.coords.longitude);
@@ -11,7 +13,7 @@ function button_pressed() {
 
 function weather(e) {
 
-  let latitude = e.latlng;
+  var latitude = e.latlng;
   lat = latitude.lat;
   lon = latitude.lng;
 
@@ -32,6 +34,8 @@ function weather(e) {
 function saaTieto(sisalto) {
   console.log(sisalto);
   let saa = document.getElementById('saa');
+  let teksti = document.getElementById('teksti').style = 'display: block';
+
 
   saa.innerText = 'Weather\n Station: ' + sisalto.name + ' ['
       + sisalto.coord.lat + ', ' + sisalto.coord.lon + ']\n' +
@@ -213,13 +217,13 @@ function alue(alue) {
 
   function Aalue(e) {
     vyohykeA_hinnasto();
-    weather(e);
+   // weather(e);
     popup.setLatLng(e.latlng).
         setContent('You clicked on A-zone').
         openOn(mymap);
   }
 
-  alueA.on('click', Aalue);
+  alueA.addEventListener('click', Aalue);
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
@@ -705,13 +709,13 @@ function alue(alue) {
 
   function Balue(e) {
     vyohykeB_hinnasto();
-    weather(e);
+    // weather(e);
     popup.setLatLng(e.latlng).
         setContent('You clicked on B-zone').
         openOn(mymap);
   }
 
-  alueB.on('click', Balue);
+  alueB.addEventListener('click', Balue);
 
   ///////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////////////
@@ -2406,13 +2410,13 @@ function alue(alue) {
 
   function Calue(e) {
     vyohykeC_hinnasto();
-    weather(e);
+    // weather(e);
     popup.setLatLng(e.latlng).
         setContent('You clicked on C-zone').
         openOn(mymap);
   }
 
-  alueC.on('click', Calue);
+  alueC.addEventListener('click', Calue);
 
   /////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////
@@ -4662,19 +4666,23 @@ function alue(alue) {
 
   function Dalue(e) {
     vyohykeD_hinnasto();
-    weather(e);
+    // weather(e);
     popup.setLatLng(e.latlng).
         setContent('You clicked on D-zone').
         openOn(mymap);
   }
 
-  alueD.on('click', Dalue);
+
+  alueD.addEventListener('click', Dalue);
 
   //SÄÄ TIEDOTUS JOS KLIKKAA HSL ALUEEN ULKOPUOLELLE
 
-  mymap.on('click', onMapClick);
+  mymap.addEventListener('click', onMapClick);
 
 }
+
+
+
 
 function onMapClick(e) {
   weather(e);

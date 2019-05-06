@@ -18,14 +18,24 @@
     <link href="CSS/main.css" rel="stylesheet">
 </head>
 <body>
+<style>
+    .header {background: url("images/flowerz.jpg") no-repeat fixed center;
+        background-size: cover;
+    }
+
+    body {
+        background: url("images/flowerz.jpg") no-repeat fixed center;
+        background-size: cover;
+    }
+</style>
 <div class="header">
 
-    <h1 class="logo">TIIMIMME</h1>
+    <h1 class="logo">Vyöhykepaikannin</h1>
     <div class="header-lista">
 
         <ul>
             <li><a href="entrypage.html">Video</a></li>
-            <li><a href="index.html">Vyöhykkeet </a></li>
+            <li><a id="active" href="index.html">Vyöhykkeet </a></li>
             <li><a href="tiimi.html"> Tiimimme</a></li>
         </ul>
     </div>
@@ -33,20 +43,21 @@
 </div>
 
 
-
-<button onclick="button_pressed()">FIND ME ON THE MAP</button>
+<button id="find_button">FIND ME</button>
 <br>
 <br>
+<div>
+    <div id="mapid"></div>
 
-<div id="mapid"></div>
+    <div id="teksti" style="display: none">
+        <p id="lippu"></p>
 
-<p id="lippu"></p>
-
-
-<aside id="saa">
-    Weather:<br>
-</aside>
-
+        <aside id="saa"></aside>
+    </div>
+    <div id="väli">
+        <p></p>
+    </div>
+</div>
 <script src="js/script.js">
 </script>
 
