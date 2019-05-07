@@ -3,24 +3,31 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin: 180px 0 0 0;
 }
-
-.centteri a:link,
-.centteri a:visited {
+.acentteri {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 2px 0;
+}
+.acentteri a:link,
+.acentteri a:visited {
     text-decoration: none;
 }
 
-.centteri a:hover {
+.acentteri a:hover {
     text-decoration: underline;
 }
 
-.centteri a:active {
+.acentteri a:active {
     text-decoration: underline;
 }
 
-.centteri video {
-    display: block;
-    margin: 0 auto;
+.video {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 0 0 0;
 }
 
 ul {
@@ -137,9 +144,7 @@ button {
     margin: 180px 5% 20px 5%
 }
 
-.centteri {
-    margin: 180px 5%;
-}
+
 
 .flexaus {
     display: flex;
@@ -167,7 +172,18 @@ button {
 }
 
 @media screen and (max-width: 700px) {
+  .centteri{  text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 180px 0 10px 0;}
+    #viideo{
+        width:360px ;
+        height: 250px;
 
+    }
+.acentteri {
+    margin: 30px 0 10px 0;
+}
     .header {
         width: 100%;
         margin: 0;
@@ -226,4 +242,12 @@ button {
 
 html, a {
     color: #ffffff;
+}
+@media screen and (max-width: 360px) {
+
+    #viideo{
+        width:250px ;
+        height: 150px;
+
+    }
 }
