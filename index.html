@@ -13,17 +13,36 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <meta name="viewport" content=" width=device-width, initial-scale=1" charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content=" width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Vyöhykepaikannin</title>
     <link href="CSS/main.css" rel="stylesheet">
     <style>
-        .header {background: url("images/flowerz.jpg") no-repeat fixed center;
+        .header {
+            background: url("images/flowerz.jpg") no-repeat fixed center;
             background-size: cover;
+        }
+
+        .header li a {
+            display: block;
+            color: rgba(0, 255, 255, 1);
+            text-align: center;
+            padding: 5px;
+            text-decoration: none;
         }
 
         body {
             background: url("images/flowerz.jpg") no-repeat fixed center;
             background-size: cover;
+        }
+
+        .header li:first-child a {
+
+            color: cyan;
+        }
+
+        #active {
+            color: rgba(255, 255, 0, 0.9);
         }
     </style>
 </head>
