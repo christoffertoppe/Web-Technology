@@ -1,0 +1,250 @@
+      function alue(alue) {
+        console.log(alue);
+        console.log(alue.features[0].geometry.coordinates[0][1][0]);
+
+        var polygon = L.polygon([
+          [alue.features[0].geometry.coordinates[0][0][0], alue.features[0].geometry.coordinates[0][0][1]],
+          [alue.features[0].geometry.coordinates[0][1][0], alue.features[0].geometry.coordinates[0][1][1]],
+          [alue.features[0].geometry.coordinates[0][2][0], alue.features[0].geometry.coordinates[0][2][1]],
+          [alue.features[0].geometry.coordinates[0][119][0], alue.features[0].geometry.coordinates[0][119][1]],
+        ]).addTo(mymap);
+      }
+
+
+
+
+
+    var alueCC = L.polygon([
+
+      [alue.features[2].geometry.coordinates[0][0][1],
+        alue.features[2].geometry.coordinates[0][0][0]],
+
+      [alue.features[2].geometry.coordinates[0][1][1],
+        alue.features[2].geometry.coordinates[0][1][0]],
+
+      [alue.features[2].geometry.coordinates[0][2][1],
+        alue.features[2].geometry.coordinates[0][2][0]],
+
+      [alue.features[2].geometry.coordinates[0][3][1],
+        alue.features[2].geometry.coordinates[0][3][0]],
+    ]).addTo(mymap);
+
+
+
+for(let i = 0; i < (lista.length); i++) {
+    var alueCC = L.polygon([
+      [lista[i][1],
+        lista[i][0]]
+    ]).addTo(mymap);
+  }
+
+
+
+
+
+
+
+var polygon = L.polygon([
+    [51.509, -0.08],
+]).addTo(mymap);
+
+var polygon = L.polygon([
+    [51.503, -0.06],
+]).addTo(mymap);
+
+var polygon = L.polygon([
+    [51.51, -0.047]
+]).addTo(mymap);
+
+
+
+
+
+
+  var alue_A = "";
+  let viimeinen_indeksi = alue.features[0].geometry.coordinates[0].length -1;
+
+  for(let i = 0; i < (alue.features[0].geometry.coordinates[0].length -116); i++) {
+   alue_A = alue_A + "[" + alue.features[0].geometry.coordinates[0][i][1]
+   + "," + alue.features[0].geometry.coordinates[0][i][0] + "],\n";
+  }
+
+
+
+
+
+
+ alue_A = alue_A + "[" + alue.features[0].geometry.coordinates[0][viimeinen_indeksi][1]
+     + ", " + alue.features[0].geometry.coordinates[0][viimeinen_indeksi][0] + "]";
+
+console.log(alue_A  + "alue_A");
+
+/*
+  var alueA = L.polygon([
+    [alue.features[0].geometry.coordinates[0][5][1],
+      alue.features[0].geometry.coordinates[0][5][0]],
+    [alue.features[0].geometry.coordinates[0][7][1],
+      alue.features[0].geometry.coordinates[0][7][0]],
+    [alue.features[0].geometry.coordinates[0][9][1],
+      alue.features[0].geometry.coordinates[0][9][0]]
+  ]).addTo(mymap);
+*/
+
+
+
+/*
+  for(let i = 0; i < (alue.features[0].geometry.coordinates[0].length); i++) {
+  var alueAA = L.polygon([
+    [alue.features[0].geometry.coordinates[0][i][1],
+    alue.features[0].geometry.coordinates[0][i][0]]
+  ]).addTo(mymap);
+}
+*/
+/*
+  for(let i = 0; i < (alue.features[1].geometry.coordinates[0].length); i++) {
+    var alueBB = L.polygon([
+      [alue.features[1].geometry.coordinates[0][i][1],
+        alue.features[1].geometry.coordinates[0][i][0]]
+    ]).addTo(mymap);
+  }
+*/
+/*
+  for(let i = 0; i < (alue.features[2].geometry.coordinates[0].length); i++) {
+    var alueCC = L.polygon([
+      [alue.features[2].geometry.coordinates[0][i][1],
+        alue.features[2].geometry.coordinates[0][i][0]]
+    ]).addTo(mymap);
+  }
+*/
+/*
+
+  for(let i = 0; i < (alue.features[3].geometry.coordinates[0].length); i++) {
+    var alueD1 = L.polygon([
+      [alue.features[3].geometry.coordinates[0][i][1],
+        alue.features[3].geometry.coordinates[0][i][0]]
+    ]).addTo(mymap);
+  }
+
+
+  for(let i = 0; i < (alue.features[3].geometry.coordinates[1].length); i++) {
+    var alueD2 = L.polygon([
+      [alue.features[3].geometry.coordinates[1][i][1],
+        alue.features[3].geometry.coordinates[1][i][0]]
+    ]).addTo(mymap);
+  }
+*/
+
+
+/*
+  let a = alue.features[0].geometry.coordinates[0][0][0];
+  console.log(alue.features[0].geometry.coordinates[0][0][0]);
+  let b = alue.features[0].geometry.coordinates[0][0][1];
+  console.log(alue.features[0].geometry.coordinates[0][0][1]);
+  let c = alue.features[0].geometry.coordinates[0][1][0];
+  console.log(alue.features[0].geometry.coordinates[0][1][0]);
+  let d = alue.features[0].geometry.coordinates[0][1][1];
+  console.log(alue.features[0].geometry.coordinates[0][1][1]);
+  let e = alue.features[0].geometry.coordinates[0][12][0];
+  console.log(alue.features[0].geometry.coordinates[0][12][0]);
+  let f = alue.features[0].geometry.coordinates[0][12][1];
+  console.log(alue.features[0].geometry.coordinates[0][12][1]);
+
+  var alueA = L.polygon([
+    [b,a],
+    [d,c],
+      [f,e]
+      ]).addTo(mymap);
+
+*/
+
+
+
+  var states = [{
+    "type": "Feature",
+    "properties": {"party": "Republican"},
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-104.05, 48.99],
+        [-97.22,  48.98],
+        [-96.58,  45.94],
+        [-104.03, 45.94],
+        [-104.05, 48.99]
+      ]]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {"party": "Democrat"},
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+
+        [-109.05, 41.00],
+        [-102.06, 40.99],
+        [-102.03, 36.99],
+        [-109.04, 36.99],
+        [-109.05, 41.00]
+
+
+/*
+        [alue.features[3].geometry.coordinates[1][0][0],
+          alue.features[3].geometry.coordinates[1][0][1]],
+
+        [alue.features[3].geometry.coordinates[1][2][0],
+          alue.features[3].geometry.coordinates[1][2][1]],
+
+        [alue.features[3].geometry.coordinates[1][3][0],
+          alue.features[3].geometry.coordinates[1][3][1]],
+
+        [alue.features[3].geometry.coordinates[1][5][0],
+          alue.features[3].geometry.coordinates[1][5][1]]
+
+*/
+
+
+      ]]
+    }
+  }];
+
+  L.geoJSON(states, {
+    style: function(feature) {
+      switch (feature.properties.party) {
+        case 'Republican': return {color: "#ff0000"};
+        case 'Democrat':   return {color: "#0000ff"};
+      }
+    }
+  }).addTo(mymap);
+
+
+  for(let i = 0; i < (alue.features[3].geometry.coordinates[1].length); i++) {}
+    var hsl = [{
+        "type": "Feature",
+        "properties": {"party": "Republican"},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+
+
+            ]]
+        }
+      }];
+
+    L.geoJSON(hsl, {
+      style: function(feature) {
+        switch (feature.properties.party) {
+          case 'Republican':
+            return {color: "#ffff00"};
+        }
+      }
+    }).addTo(mymap);
+
+
+
+
+
+
+
+
+
+
+
