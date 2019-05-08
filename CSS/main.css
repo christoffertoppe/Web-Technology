@@ -133,14 +133,18 @@ button {
     margin: 3px;
 }
 
-#tiimi{ margin: 130px 5% 20px 5%}
+#tiimi {
+    margin: 180px 5% 20px 5%
+}
+
 .centteri {
     margin: 180px 5%;
 }
 
 .flexaus {
     display: flex;
-    flex-wrap: wrap;
+
+    flex-flow: row wrap;
     justify-content: space-evenly;
 
 
@@ -163,6 +167,7 @@ button {
 }
 
 @media screen and (max-width: 700px) {
+
     .header {
         width: 100%;
         margin: 0;
@@ -210,7 +215,7 @@ button {
     .flexaus li {
         list-style-type: none;
         width: 300px;
-        margin: 15px;
+        margin: 35px;
         text-align: center;
         line-height: 45px;
         font-size: 20px;
