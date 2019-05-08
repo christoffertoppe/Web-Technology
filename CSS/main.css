@@ -243,6 +243,10 @@ button {
 html, a {
     color: #ffffff;
 }
+
+#viideo {
+    justify-content: center;
+}
 @media screen and (max-width: 360px) {
 
     #viideo{
