@@ -1,6 +1,15 @@
 var key = '1249e33a877128e5af660a8ff33f7f93';
 
-document.getElementById('find_button').addEventListener('click', button_pressed);
+var lippu_AB = 2.80;
+var lippu_BC = 2.80;
+var lippu_CD = 4.20;
+var lippu_D = 2.80;
+var lippu_ABC = 4.60;
+var lippu_BCD = 5.40;
+var lippu_ABCD = 6.40;
+
+document.getElementById('find_button').
+    addEventListener('click', button_pressed);
 
 function button_pressed() {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -36,7 +45,6 @@ function saaTieto(sisalto) {
   let saa = document.getElementById('saa');
   let teksti = document.getElementById('teksti').style = 'display: block';
 
-
   saa.innerText = 'Weather\n Station: ' + sisalto.name + ' ['
       + sisalto.coord.lat + ', ' + sisalto.coord.lon + ']\n' +
       'Weather condition: ' + sisalto.weather[0].main + '\n' +
@@ -45,22 +53,30 @@ function saaTieto(sisalto) {
 
 function vyohykeA_hinnasto() {
   lippu = document.getElementById('lippu');
-  lippu.innerText = 'Last selected zone\nZone A ticket prices:\nAB 2,80€\nABC 4,60€\nABCD 6,40€';
+  lippu.innerText = 'Last selected zone\nZone A ticket prices:\nAB ' +
+      lippu_AB.toFixed(2) + '€\nABC ' + lippu_ABC.toFixed(2) + '€\nABCD ' +
+      lippu_ABCD.toFixed(2) + '€';
 }
 
 function vyohykeB_hinnasto() {
   lippu = document.getElementById('lippu');
-  lippu.innerText = 'Last selected zone\nZone B ticket prices:\nAB ja BC 2,80€\nABC 4,60€\nBCD 5,40€\nABCD 6,40€';
+  lippu.innerText = 'Last selected zone\nZone B ticket prices:\nAB ja BC ' +
+      lippu_AB.toFixed(2) + '€\nABC ' + lippu_ABC.toFixed(2) + '€\nBCD ' +
+      lippu_BCD.toFixed(2) + '€\nABCD ' + lippu_ABCD.toFixed(2) + '€';
 }
 
 function vyohykeC_hinnasto() {
   lippu = document.getElementById('lippu');
-  lippu.innerText = 'Last selected zone\nZone C ticket prices:\nBC 2,80€\nABC 4,60€\nCD 4,20€\nABCD 6,40€';
+  lippu.innerText = 'Last selected zone\nZone C ticket prices:\nBC ' +
+      lippu_BC.toFixed(2) + '€\nABC ' + lippu_ABC.toFixed(2) + '€\nCD ' +
+      lippu_CD.toFixed(2) + '€\nABCD ' + lippu_ABCD.toFixed(2) + '€';
 }
 
 function vyohykeD_hinnasto() {
   lippu = document.getElementById('lippu');
-  lippu.innerText = 'Last selected zone\nZone D ticket prices:\nD 2,80€\nCD 4,20€\nBCD 5,40€\nABCD 6,40€';
+  lippu.innerText = 'Last selected zone\nZone D ticket prices:\nD ' +
+      lippu_D.toFixed(2) + '€\nCD ' + lippu_CD.toFixed(2) + '€\nBCD ' +
+      lippu_BCD.toFixed(2) + '€\nABCD ' + lippu_ABCD.toFixed(2) + '€';
 }
 
 /* HSL-alueen GEOJSON taulukko*/
@@ -76,9 +92,14 @@ fetch(
       console.log(error);
     });
 
+/*
+* Koko alueen funktiot
+ */
 function alue(alue) {
   console.log(alue);
-
+  /*
+  * Alue A funktiot
+   */
   var areaA = [];
   let j = -1;
   for (let i = 0; i < alue.features[0].geometry.coordinates[0].length; i++) {
@@ -89,6 +110,7 @@ function alue(alue) {
   }
 
   console.log(areaA.length);
+
 
   var alueA = L.polygon([
     [areaA  [0], areaA  [1]],
@@ -217,7 +239,7 @@ function alue(alue) {
 
   function Aalue(e) {
     vyohykeA_hinnasto();
-   // weather(e);
+    // weather(e);
     popup.setLatLng(e.latlng).
         setContent('You clicked on A-zone').
         openOn(mymap);
@@ -225,8 +247,9 @@ function alue(alue) {
 
   alueA.addEventListener('click', Aalue);
 
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
+  /*
+  * Alue B funktiot
+   */
 
   var areaB = [];
   j = -1;
@@ -717,8 +740,9 @@ function alue(alue) {
 
   alueB.addEventListener('click', Balue);
 
-  ///////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////
+  /*
+  * Alue C funktiot
+   */
 
   var areaC = [];
   j = -1;
@@ -2418,8 +2442,9 @@ function alue(alue) {
 
   alueC.addEventListener('click', Calue);
 
-  /////////////////////////////////////////////////////////////////////////////////
-  /////////////////////////////////////////////////////////////////////////////////
+  /*
+ * Alue D funktiot, D alue jaettu D1 ja D2
+  */
 
   var areaD1 = [];
   j = -1;
@@ -2444,8 +2469,6 @@ function alue(alue) {
 
   console.log(areaD2.length);
   console.log(alue.features[3].geometry.coordinates[1][0].length);
-
-
 
   var alueD = L.polygon([
 
@@ -4672,7 +4695,6 @@ function alue(alue) {
         openOn(mymap);
   }
 
-
   alueD.addEventListener('click', Dalue);
 
   //SÄÄ TIEDOTUS JOS KLIKKAA HSL ALUEEN ULKOPUOLELLE
@@ -4680,9 +4702,6 @@ function alue(alue) {
   mymap.addEventListener('click', onMapClick);
 
 }
-
-
-
 
 function onMapClick(e) {
   weather(e);

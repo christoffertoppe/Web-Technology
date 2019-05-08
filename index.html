@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-          crossorigin=""/>
-    <link rel="stylesheet" href="CSS/main.css"/>
+    <meta charset="UTF-8">
+    <title>Entry</title>
+    <link href="CSS/main.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -12,21 +11,21 @@
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="CSS/main.css" rel="stylesheet">
 </head>
 <body>
 <style>
-    .header {background: url("images/flowerz.jpg") no-repeat fixed center;
+    html, .header {
+        background: url(images/brick.jpeg) no-repeat fixed center;
         background-size: cover;
     }
 
-    body {
-        background: url("images/flowerz.jpg") no-repeat fixed center;
+    .header li:first-child:hover {
+        background: url(images/brick.jpeg) no-repeat fixed center;
         background-size: cover;
+        opacity: 0.5;
+        color: #fff;
     }
+
 </style>
 <div class="header">
 
@@ -34,45 +33,30 @@
     <div class="header-lista">
 
         <ul>
-            <li><a href="entrypage.html">Video</a></li>
-            <li><a id="active" href="index.html">Vyöhykkeet </a></li>
+            <li><a id="active" href="index.html">Video</a></li>
+            <li><a href="map.html">Vyöhykkeet </a></li>
             <li><a href="tiimi.html"> Tiimimme</a></li>
         </ul>
     </div>
-
 </div>
 
 
-<button id="find_button">FIND ME</button>
-<br>
-<br>
-<div>
-    <div id="mapid"></div>
+<div class="centteri">
+    <h2>Meneekö HSL:än vyöhykemuutos yli hilseen? Onko sinulla vaikeuksia hahmottaa millä vyöhykkeellä olet, kun käyt
+        asioilla?
+        Haluatko samalla säätiedot kun katsot vyöhykkeesi etkä saa tätä tietoa reittioppaasta? <br><br>
+        Älä huolehdi enään. Vyöhykepaikannin mahdollistaa kaiken tämän.</h2>
+    <h2>KATSO VIDEO MIKSI TARVITSET SIVUAMME</h2>
 
-    <div id="teksti" style="display: none">
-        <p id="lippu"></p>
 
-        <aside id="saa"></aside>
-    </div>
-    <div id="väli">
-        <p></p>
-    </div>
+    <video width="100%" height="576" controls poster="images/kanislehti.png">
+        <source src="images/Mediaproject.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+    </video>
+
+
+    <a href="map.html"><h3>JATKA PAIKANNUKSEEN</h3></a>
 </div>
-<script src="js/script.js">
-</script>
-
-<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-        crossorigin="">
-
-</script>
-<script>
-  /*
-  * luo muuttujan mymap joka viittaa mapid elementtiin ja antaa kordinaatit 60.25, 24.9 sille (kordinaatit ovat helsingin alue) ja zoomaus taso 10.
-  */
-  var mymap = L.map('mapid').setView([60.25, 24.9], 10);
-  L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mymap);
-</script>
-
 </body>
 </html>
