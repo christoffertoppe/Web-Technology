@@ -1,6 +1,6 @@
 # Web-Technology
 
-## HSL-Vyöhykkeet ja Sää kartalla.
+## Ryhmätyö: HSL-Vyöhykkeet ja Sää kartalla.
 ### Toteutus:
 #### Css
 #### HTML
