@@ -2,6 +2,6 @@
 
 ## HSL-Vyöhykkeet ja Sää kartalla.
 ### Toteutus:
-#### Css/
+#### Css
 #### HTML
 #### JavaScript
